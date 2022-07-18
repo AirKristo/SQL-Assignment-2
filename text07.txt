@@ -1,0 +1,42 @@
+kp1404
+
+Please replace the NetID above with your own NetID
+
+Please replace [] parts with your own answer.
+
+
+ANSWER4:
+- Tables changed (if any): None
+    - Explain: No changes due to error.
+- Error messages (if any): Y
+    - Message: ERROR at line 1:ORA-02292: integrity constraint (KP1404.DOG_FK) violated - child record found
+    - Explain: Error occurred because the student with NNumber = '7' is a foreign key in the DOG table, because             this record exists in the DOG table, the student can not be deleted. 
+
+ANSWER5:
+- Tables changed (if any): STUDENT
+    - Explain: Student with NNumber = '6' had Deposit reduced by 5
+- Error messages (if any): Y
+    - Message: ERROR at line 1:ORA-02292: integrity constraint (KP1404.BITES_BITER_FK) violated - child record found
+    - Explain: Error occurred because Dog with SerialNumber = '2005' is a foreign and primary key in BITES so the record        DOG can not be deleted if the record referencing it exists in BITES
+
+ANSWER6:
+- Tables changed (if any): DOG
+    - Explain: DOG with SerialNumber = '3' had Breed updated to 'Poodle'
+- Error messages (if any): N
+    - Message: N/A
+    - Explain: N/A
+
+
+ANSWER7:
+- Tables changed (if any): STUDENT
+    - Explain: Inserted record in Student with NNumber = '2502', Deposit = 50 and NetID = NULL
+- Error messages (if any): N
+    - Message: N/A
+    - Explain: N/A
+
+ANSWER8:
+- Tables changed (if any): None
+    - Explain: No change due to error.
+- Error messages (if any): Y
+    - Message: ERROR at line 1:ORA-00001: unique constraint (KP1404.STUDENT_NET_ID_UNIQUE) violated 
+    - Explain: NetID in STUDENT is UNIQUE. The NetID 'aa1' already exists for the student with NNumber = '2' so a new           record can not be created with NetID = 'aa1'
