@@ -1,5 +1,3 @@
--- Replace zk1 with your NetID
-
 -- execute data setup script
 @dataSetupScript07.sql
 
